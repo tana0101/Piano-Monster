@@ -11,6 +11,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.Desktop;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -57,6 +59,9 @@ public class PianoMonsterFrame extends JFrame {
     private static JButton startTeachingButton;// 開啟教學按鈕
     private static JButton stopTeachingButton;// 關閉教學按鈕
     private static JLabel teachInstructionLabel;// 教學時教導使用者如何彈奏的標籤
+    private JButton reflectionSwitchButton;//開啟/關閉鍵盤投射按鈕
+    private JLabel whiteKeyboardReflectionLabel;
+    private JLabel blackKeyboardReflectionLabel;
     
     private static JButton shareFacebookButton;// 選擇標籤
     private static JButton shareTwitterButton;// 選擇標籤
@@ -66,19 +71,17 @@ public class PianoMonsterFrame extends JFrame {
     private static final int whiteKeyTotal = 43;// 白鍵數量
     private static final int blackKeyTotal = 30;
     // 事件處理
-    private int timePeriod = 7; // 時間間隔(毫秒) 何 琴光速度太快 1改成7
+    private int timePeriod = 5; // 時間間隔(毫秒) 何 琴光速度太快 1改成7
     private int delay = 1; // 延遲(毫秒)
     private static final int RELEASING = 0;
     private static final int PRESSING = 1;
     private static int[] stateKey = new int[whiteKeyTotal + blackKeyTotal];
     private static int[] teachStateKey = new int[whiteKeyTotal + blackKeyTotal];// 教學琴鍵狀態
+    private boolean reflection=false;
 
     public PianoMonsterFrame() {
 
-        /* -------------設定Frame------------- */
-        // set frame size
-        // Toolkit kit = Toolkit.getDefaultToolkit();
-        // Dimension userScreenSize = kit.getScreenSize(); //根據使用者的螢幕大小設定
+        /* -------------設定JFrame------------- */
         PianoMonsterFrame.width = 1920;
         PianoMonsterFrame.height = 1080;
         this.setSize(PianoMonsterFrame.width / 4 * 3, PianoMonsterFrame.height / 4 * 3);
@@ -103,7 +106,6 @@ public class PianoMonsterFrame extends JFrame {
         // this.action();
 
         /* -------------建立音效位置------------- */
-        // loading audio
         CreateAudioList audio = new CreateAudioList();
         audioList = audio.getList();
 
@@ -176,8 +178,39 @@ public class PianoMonsterFrame extends JFrame {
         stopTeachingButton = new JButton("停止教學");
         Icon teachIcon = new ImageIcon("image/followLabel.PNG");
         teachInstructionLabel = new JLabel(teachIcon);
+
+        //reflection
+        reflectionSwitchButton=new JButton("開啟鍵盤投射");
+        reflectionSwitchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (reflection){
+                    reflection=false;
+                    whiteKeyboardReflectionLabel.setVisible(reflection);
+                    blackKeyboardReflectionLabel.setVisible(reflection);
+                    
+                    PianoMonsterFrame.this.reflectionSwitchButton.setText("開啟鍵盤投射");
+                }
+                else{
+                    reflection=true;
+                    whiteKeyboardReflectionLabel.setVisible(reflection);
+                    blackKeyboardReflectionLabel.setVisible(reflection);
+                    PianoMonsterFrame.this.reflectionSwitchButton.setText("關閉鍵盤投射");
+                }
+                requestFocus();
+            }
+        });
+        //reflection
+        Icon whiteIcon = new ImageIcon("image/white.PNG");
+        whiteKeyboardReflectionLabel=new JLabel(whiteIcon);
+        whiteKeyboardReflectionLabel.setVisible(false);
+        Icon blackIcon = new ImageIcon("image/black.PNG");
+        blackKeyboardReflectionLabel=new JLabel(blackIcon);
+        blackKeyboardReflectionLabel.setVisible(false);
+
+
         //教學歌曲清單和下拉式選單
-        String[] songs={"","小星星","小蜜蜂","兩隻老虎","月亮代表我的心"};
+        String[] songs={"小星星","小蜜蜂","兩隻老虎","月亮代表我的心"};
         songSelectList=new JComboBox<String>(songs);
         
         
@@ -187,6 +220,7 @@ public class PianoMonsterFrame extends JFrame {
         //分享到推特的按鈕
         Icon twitterIcon = new ImageIcon("image/twitter.PNG");
         shareTwitterButton = new JButton(twitterIcon);
+
         //錄影按鈕
         recordButton=new RecordButton();
         recordButton.addActionListener(new ActionListener() {
@@ -213,20 +247,25 @@ public class PianoMonsterFrame extends JFrame {
         shareTwitterButton.addMouseListener(teachListener);
 
         //設定button位置&大小
+        reflectionSwitchButton.setBounds(1270, 450, 150, 50);//reflection
+        whiteKeyboardReflectionLabel.setBounds(360, 630, 700, 700);//reflection
+        blackKeyboardReflectionLabel.setBounds(370, 430, 700, 700);//reflection
         teachModeOnButton.setBounds(1200, 20, 150,50);
         songSelectList.setBounds(1175, 110,100,30);
         startTeachingButton.setBounds(1300, 100, 100, 50);
         stopTeachingButton.setBounds(1200, 250, 150, 50);
-        teachInstructionLabel.setBounds(300, 200, 500, 200);
+        teachInstructionLabel.setBounds(300, 100, 500, 200);//300,100
         shareFacebookButton.setBounds(1300, 600, 100, 100);
         shareTwitterButton.setBounds(1150, 600, 100, 100);
         recordButton.setBounds(1200, 450, 50, 50);
 
-        //隱藏按鈕
+        //隱藏按鈕(這些按鈕在教學模式中才會出現)
         songSelectList.setVisible(false);
         startTeachingButton.setVisible(false);
         stopTeachingButton.setVisible(false);
         
+        
+
         add(teachModeOnButton,0);
         this.getLayeredPane().add(teachModeOnButton, Integer.valueOf(Integer.MAX_VALUE));
         add(startTeachingButton, 0);
@@ -244,6 +283,12 @@ public class PianoMonsterFrame extends JFrame {
         this.getLayeredPane().add(recordButton, Integer.valueOf(Integer.MAX_VALUE));
         add(songSelectList,0);
         this.getLayeredPane().add(songSelectList, Integer.valueOf(Integer.MAX_VALUE));
+        add(reflectionSwitchButton,0);//reflection
+        this.getLayeredPane().add(reflectionSwitchButton, Integer.valueOf(Integer.MAX_VALUE));//reflection
+        add(whiteKeyboardReflectionLabel,0);//reflection
+        this.getLayeredPane().add(whiteKeyboardReflectionLabel, Integer.valueOf(Integer.MAX_VALUE));//reflection
+        add(blackKeyboardReflectionLabel,0);//reflection
+        this.getLayeredPane().add(blackKeyboardReflectionLabel, Integer.valueOf(Integer.MAX_VALUE));//reflection
 
         for (int i = 0; i < whiteKeyTotal + blackKeyTotal; i++) {
             stateKey[i] = RELEASING;
@@ -302,7 +347,7 @@ public class PianoMonsterFrame extends JFrame {
     // 獨立處理不同事件的狀態
     private class controlState {
         private int timePeriod = 1; // 時間間隔(毫秒)
-        private int delay = 1; // 延遲(毫秒)
+        private int delay = 0; // 延遲(毫秒)
         private KeyButton touchButton;// 當下觸發的按鍵
         private AudioPlay voice;// 當下觸發的聲音
         private Color touchButtonColor = Color.pink;// 觸發後的顏色
@@ -315,8 +360,6 @@ public class PianoMonsterFrame extends JFrame {
                 public void run() {
                     if (stateKey[key] == PRESSING && finish == false) { // 不同鍵才觸發
                         finish = true;
-                        //System.out.println("正在壓著");
-                        // test
                         voice = new AudioPlay(audioList.get(key).toString());
                         voice.play();
                         touchButton = keyButtonList.get(key);
@@ -495,13 +538,30 @@ public class PianoMonsterFrame extends JFrame {
             //System.out.println("*鍵盤開始壓*");
             int keyCode = e.getKeyCode();
             // 另外處理左右鍵的轉調功能
+            int sevenDistance=182;
             if (keyCode == KeyEvent.VK_LEFT || keyCode == KeyEvent.VK_RIGHT) {
                 if (keyCode == KeyEvent.VK_LEFT) {
-                    if (Key.getKeyBasic() > 0)
+                    if (Key.getKeyBasic() > 0){
                         Key.setKeyBasic(Key.getKeyBasic() - 1);
+                        int whiteNewX=whiteKeyboardReflectionLabel.getX()-sevenDistance;
+                        int whiteY=whiteKeyboardReflectionLabel.getY();
+                        whiteKeyboardReflectionLabel.setLocation(whiteNewX, whiteY);
+                        int blackNewX=blackKeyboardReflectionLabel.getX()-sevenDistance;
+                        int blackY=blackKeyboardReflectionLabel.getY();
+                        blackKeyboardReflectionLabel.setLocation(blackNewX, blackY);
+                    }
+                        
                 } else if (keyCode == KeyEvent.VK_RIGHT) {
-                    if (Key.getKeyBasic() < 4)
+                    if (Key.getKeyBasic() < 4){
                         Key.setKeyBasic(Key.getKeyBasic() + 1);
+                        int whiteNewX=whiteKeyboardReflectionLabel.getX()+sevenDistance;
+                        int whiteY=whiteKeyboardReflectionLabel.getY();
+                        whiteKeyboardReflectionLabel.setLocation(whiteNewX, whiteY);
+                        int blackNewX=blackKeyboardReflectionLabel.getX()+sevenDistance;
+                        int blackY=blackKeyboardReflectionLabel.getY();
+                        blackKeyboardReflectionLabel.setLocation(blackNewX, blackY);
+                    }
+                        
                 }
                 System.out.println("*Basic = " + Key.getKeyBasic() + "*");
             }
@@ -611,16 +671,18 @@ public class PianoMonsterFrame extends JFrame {
     private Point getTopLeftPoint(){
         return this.getLocation();
     }
+    
     public void action() {
-        System.out.println("琴光啟動");
+        System.out.println("琴光thread啟動");
         Timer timer = new Timer(); // 主流程控制
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 shootAction(); // 發射琴光
+                stepAction();// 走一步 不知道和重繪誰先
                 outOfBoundsAction(); // 刪除越界琴光
                 repaint(); // 重繪，呼叫paint()方法
-                stepAction();// 走一步 不知道和重繪誰先
+                
                 
             }
         }, delay, timePeriod);// 從現在起delay毫秒後 每過timePeriod毫秒執行這個任務(Task) timer.schedule(task, delay, period)
