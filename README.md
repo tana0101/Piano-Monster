@@ -26,10 +26,10 @@ Do Re Mi Fa So La Si Do
 控制相對位置的黑鍵<BR>
 <img src="4.png" alt="Cover" width="50%"/><BR>
 鍵盤上的SD GHJ,<BR>
-Do#Re# Fa#So#La#<BR>
+Do#Re# Fa#So#La#<BR><BR>
 <img src="3.png" alt="Cover" width="50%"/><BR>
 鍵盤上的23 567,<BR>
-Do#Re# Fa#So#La#<BR>
+Do#Re# Fa#So#La#<BR><BR>
 
 ### 把位：
 <img src="5.png" alt="Cover" width="50%"/><BR>
