@@ -13,14 +13,15 @@
 
 ## 操作按鍵：
 ### 白鍵：
-<img src="1.png" alt="Cover" width="50%"/><BR>
+<BR>
+<img src="1.png" alt="Cover" width="50%"/>
 鍵盤上的ZXCVBNM,<BR>
 代表一個八度從低音C到高音C<BR>
-Do Re Mi Fa So La Si Do
-<img src="2.png" alt="Cover" width="50%"/><BR>
+Do Re Mi Fa So La Si Do<BR>
+<img src="2.png" alt="Cover" width="50%"/>
 鍵盤上的QWERTYUI,<BR>
 代表一個八度從高音C到更高音C<BR>
-Do Re Mi Fa So La Si Do
+Do Re Mi Fa So La Si Do<BR>
 
 ### 黑鍵：
 控制相對位置的黑鍵<BR>
