@@ -14,7 +14,7 @@
 
 ## 操作按鍵：
 ### 白鍵：
-![image](https://github.com/tana0101/Piano-Monster/blob/main/1.png?raw=true)
+
 鍵盤上的ZXCVBNM,<BR>
 代表一個八度從低音C到高音C<BR>
 Do Re Mi Fa So La Si Do
