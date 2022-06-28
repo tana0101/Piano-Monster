@@ -1,5 +1,5 @@
 # Piano-Monster
-Piano-Monster是以模擬鋼琴為基礎，
+**Piano-Monster**是以模擬鋼琴為基礎，
 加入教學、錄影、分享功能的Java專案。
 
 ## 使用說明：
