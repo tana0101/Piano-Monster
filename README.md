@@ -2,6 +2,8 @@
 **Piano-Monster**是以模擬鋼琴為基礎，
 加入教學、錄影、分享功能的Java專案。
 
+![image](https://github.com/tana0101/Piano-Monster/blob/main/%E4%BB%8B%E9%9D%A2%E4%BB%8B%E7%B4%B9.png?raw=true)
+
 ## 使用說明：
 | Features               | Illustrate      | 
 | :-------------: | :--------------------: | 
@@ -9,8 +11,6 @@
 | 教學模式 | 從選單選擇歌曲，並根據指示操作。 | 
 | 分享 | 可直接連接至Twitter或Facebook。 | 
 | 錄影 |取名後，可錄製影片（暫無聲音）。 | 
-
-  	 
 
 ## 操作按鍵：
 
