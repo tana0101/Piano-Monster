@@ -37,4 +37,4 @@ Do#Re# Fa#So#La#<BR>
 鍵盤上的方向鍵<BR>
 左 與 右<BR>
 可以控制把位的降與升<BR>
- 
+ https://github.com/tana0101/Piano-Monster/blob/main/%E8%B3%87%E7%94%A2%201@4x.png?raw=true
