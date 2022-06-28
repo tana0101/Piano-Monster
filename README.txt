@@ -2,6 +2,11 @@ Piano-Monster是以模擬鋼琴為基礎，
 加入教學、錄影、分享功能的Java專案。
 由 張銀軒、林一、林佳何 於6/28更新
 
+github:
+https://github.com/tana0101/Piano-Monster.git
+簡報：
+https://docs.google.com/presentation/d/1-WyG9Pby6WOiz_KFedh397Arro3Xu0DtpVzBRgI6csw/edit?usp=sharing
+
 使用說明：
 
 長壓短壓 會影響延音的時間。
