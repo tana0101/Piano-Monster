@@ -19,16 +19,17 @@
 鍵盤上的ZXCVBNM,<BR>
 代表一個八度從低音C到高音C<BR>
 Do Re Mi Fa So La Si Do
-
+![image](https://github.com/tana0101/Piano-Monster/blob/main/2.png?raw=true)
 鍵盤上的QWERTYUI,<BR>
 代表一個八度從高音C到更高音C<BR>
 Do Re Mi Fa So La Si Do
 
 ### 黑鍵：
 控制相對位置的黑鍵<BR>
-
+![image](https://github.com/tana0101/Piano-Monster/blob/main/3.png?raw=true)
 鍵盤上的SD GHJ,<BR>
 Do#Re# Fa#So#La#<BR>
+![image](https://github.com/tana0101/Piano-Monster/blob/main/4.png?raw=true)
 鍵盤上的23 567,<BR>
 Do#Re# Fa#So#La#<BR>
 
