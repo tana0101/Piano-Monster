@@ -26,10 +26,10 @@ Do Re Mi Fa So La Si Do
 
 ### 黑鍵：
 控制相對位置的黑鍵<BR>
-![image](https://github.com/tana0101/Piano-Monster/blob/main/3.png?raw=true)
+![image](https://github.com/tana0101/Piano-Monster/blob/main/4.png?raw=true)
 鍵盤上的SD GHJ,<BR>
 Do#Re# Fa#So#La#<BR>
-![image](https://github.com/tana0101/Piano-Monster/blob/main/4.png?raw=true)
+![image](https://github.com/tana0101/Piano-Monster/blob/main/3.png?raw=true)
 鍵盤上的23 567,<BR>
 Do#Re# Fa#So#La#<BR>
 
