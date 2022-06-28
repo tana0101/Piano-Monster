@@ -18,17 +18,17 @@
 代表一個八度從低音C到高音C<BR>
 Do Re Mi Fa So La Si Do<BR><BR>
 <img src="2.png" alt="Cover" width="50%"/><BR>
-鍵盤上的QWERTYUI,<BR>
+鍵盤上的QWERTYUI<BR>
 代表一個八度從高音C到更高音C<BR>
 Do Re Mi Fa So La Si Do<BR><BR>
 
 ### 黑鍵：
 控制相對位置的黑鍵<BR>
 <img src="4.png" alt="Cover" width="50%"/><BR>
-鍵盤上的SD GHJ,<BR>
+鍵盤上的SD GHJ<BR>
 Do#Re# Fa#So#La#<BR><BR>
 <img src="3.png" alt="Cover" width="50%"/><BR>
-鍵盤上的23 567,<BR>
+鍵盤上的23 567<BR>
 Do#Re# Fa#So#La#<BR><BR>
 
 ### 把位：
