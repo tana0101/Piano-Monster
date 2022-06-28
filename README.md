@@ -13,7 +13,7 @@
 | 錄影 |取名後，可錄製影片（暫無聲音）。 | 
 
 ## 操作按鍵：
-
+	<img src="https://github.com/tana0101/Piano-Monster/blob/main/1.png?raw=true" width="200" height="200" alt="微信小程式"/><br/>
 ### 白鍵：
 ![image](https://github.com/tana0101/Piano-Monster/blob/main/1.png?raw=true)
 鍵盤上的ZXCVBNM,<BR>
