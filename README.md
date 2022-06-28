@@ -3,7 +3,7 @@
 加入教學、錄影、分享功能的Java專案。
 
 ![image](https://github.com/tana0101/Piano-Monster/blob/main/%E4%BB%8B%E9%9D%A2%E4%BB%8B%E7%B4%B9.png?raw=true)
-
+<img src="1.png" alt="Cover" width="50%"/>
 ## 使用說明：
 | Features               | Illustrate      | 
 | :-------------: | :--------------------: | 
