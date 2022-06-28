@@ -5,7 +5,6 @@
 ## 介面：
 [**專案簡報**](https://docs.google.com/presentation/d/1-WyG9Pby6WOiz_KFedh397Arro3Xu0DtpVzBRgI6csw/edit?usp=sharing)<BR>
 <img src="introduce.png" alt="Cover" width="100%"/><BR>
-<img src="introduce2.png" alt="Cover" width="100%"/><BR>
 ## 使用說明：
 | Features               | Illustrate      | 
 | :-------------: | :--------------------: | 
@@ -15,6 +14,7 @@
 | 錄影 |取名後，可錄製影片（暫無聲音）。 | 
 
 ## 操作按鍵：
+ <img src="introduce2.png" alt="Cover" width="80%"/><BR>
 ### 白鍵：
 <img src="1.png" alt="Cover" width="50%"/><BR>
 鍵盤上的ZXCVBNM,<BR>
