@@ -24,15 +24,15 @@ Do Re Mi Fa So La Si Do
 
 ### 黑鍵：
 控制相對位置的黑鍵<BR>
-<img src="4.png" alt="Cover" width="50%"/>
+<img src="4.png" alt="Cover" width="50%"/><BR>
 鍵盤上的SD GHJ,<BR>
 Do#Re# Fa#So#La#<BR>
-<img src="3.png" alt="Cover" width="50%"/>
+<img src="3.png" alt="Cover" width="50%"/><BR>
 鍵盤上的23 567,<BR>
 Do#Re# Fa#So#La#<BR>
 
 ### 把位：
-<img src="5.png" alt="Cover" width="50%"/>
+<img src="5.png" alt="Cover" width="50%"/><BR>
 鍵盤上的方向鍵<BR>
 左 與 右<BR>
 可以控制把位的降與升<BR>
