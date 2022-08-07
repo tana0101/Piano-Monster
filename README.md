@@ -1,7 +1,7 @@
 # Piano-Monster
 **Piano-Monster**是以模擬鋼琴為基礎，
 加入教學、錄影、分享功能的Java專案。<BR>
-由 **張銀軒、林一、林佳何** 於6/28更新
+由 **張銀軒、林一、林佳何** 於2022.6.28更新
 ## 介面：
 [**專案簡報**](https://docs.google.com/presentation/d/1-WyG9Pby6WOiz_KFedh397Arro3Xu0DtpVzBRgI6csw/edit?usp=sharing)<BR>
 <img src="introduce.png" alt="Cover" width="100%"/><BR>
